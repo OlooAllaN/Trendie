@@ -1,0 +1,15 @@
+<resources>
+    <string name="title_activity_maps">Map</string>
+    <string name="app_name">Trendie</string>
+    <string name="feedTab">Feed</string>
+    <string name="trendingTab">Trending</string>
+    <string name="profileTab">Profile</string>
+    <string name="name">John Doe</string>
+    <string name="handle">johndoe</string>
+    <string name="createInfo">Create your very own Trendie account.</string>
+    <string name="accountPassword">Password:</string>
+    <string name="accountName">Name:</string>
+    <string name="accountHandle">Handle:</string>
+    <string name="create">CREATE</string>
+    <string name="login">LOGIN</string>
+</resources>
