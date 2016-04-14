@@ -46,21 +46,22 @@
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:id="@+id/handleText"
-        android:layout_toRightOf="@+id/accountPassword"
-        android:layout_toEndOf="@+id/accountPassword"
         android:hint="User Handle"
-        android:layout_below="@+id/feedTab" />
+        android:layout_alignTop="@+id/accountHandle"
+        android:layout_toRightOf="@+id/accountPassword"
+        android:layout_toEndOf="@+id/accountPassword" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login"
-        android:id="@+id/createButton"
+        android:id="@+id/loginButton"
         android:layout_below="@+id/accountPassword"
         android:layout_toRightOf="@+id/accountPassword"
         android:layout_toEndOf="@+id/accountPassword"
         android:layout_marginTop="53dp"
-        android:onClick="onLogin" />
+        android:onClick="onLogin"
+        android:nestedScrollingEnabled="false" />
 
 
 </RelativeLayout>

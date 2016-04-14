@@ -55,7 +55,10 @@
         android:layout_below="@+id/name"
         android:layout_toRightOf="@+id/profilePic"
         android:layout_toEndOf="@+id/profilePic"
-        android:paddingStart="5sp" />
+        android:paddingLeft="5sp"
+        android:paddingStart="5sp"
+        android:paddingEnd="0sp"
+        android:paddingRight="0sp"/>
 
     <fragment
         android:id="@+id/map"
@@ -102,15 +105,16 @@
         android:layout_marginTop="5sp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/name"
         android:id="@+id/name"
         android:layout_alignTop="@+id/profilePic"
         android:layout_toRightOf="@+id/profilePic"
         android:layout_toEndOf="@+id/profilePic"
-        android:paddingStart="5sp" />
+        android:paddingLeft="5sp"
+        android:paddingRight="0sp"
+        android:text="@string/name" />
 
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.baseballforlife7795gmail.myapplication;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.widget.TextView;
 /**
  * Created by Kyle on 3/31/2016.
  */
-public class CreateAccount extends TrendieProfile {
+public class CreateAccount extends Activity {
 
     private EditText nameText;
     private EditText handleText;
@@ -22,9 +23,11 @@ public class CreateAccount extends TrendieProfile {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trendie_create_account);
 
-        nameText = (EditText) findViewById(R.id.nameText);
-        handleText = (EditText) findViewById(R.id.handleText);
-        passwordText = (EditText) findViewById(R.id.passwordText);
+        nameText = (EditText) findViewById(R.id.createNameText);
+        handleText = (EditText) findViewById(R.id.createHandleText);
+        passwordText = (EditText) findViewById(R.id.createPasswordText);
+
+
 
 
     }
@@ -34,11 +37,12 @@ public class CreateAccount extends TrendieProfile {
         try {
             String name = nameText.getText().toString();
             String handle = handleText.getText().toString();
+            String password = passwordText.getText().toString();
 
             Database entry = new Database(CreateAccount.this);
             entry.open();
 
-            entry.createEntry(name, handle);
+            entry.createEntry(name, handle, password);
 
             entry.close();
         }catch (Exception e){

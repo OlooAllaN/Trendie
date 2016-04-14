@@ -55,32 +55,28 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/nameText"
+        android:id="@+id/createNameText"
+        android:hint="User Name"
         android:layout_alignTop="@+id/accountName"
-        android:layout_alignRight="@+id/handleText"
-        android:layout_alignEnd="@+id/handleText"
-        android:layout_alignLeft="@+id/handleText"
-        android:layout_alignStart="@+id/handleText"
-        android:hint="User Name" />
+        android:layout_alignLeft="@+id/createHandleText"
+        android:layout_alignStart="@+id/createHandleText" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/passwordText"
-        android:layout_below="@+id/handleText"
-        android:layout_alignLeft="@+id/handleText"
-        android:layout_alignStart="@+id/handleText"
-        android:layout_alignRight="@+id/handleText"
-        android:layout_alignEnd="@+id/handleText"
-        android:hint="User Password" />
+        android:id="@+id/createPasswordText"
+        android:hint="User Password"
+        android:layout_alignTop="@+id/accountPassword"
+        android:layout_toRightOf="@+id/accountPassword"
+        android:layout_toEndOf="@+id/accountPassword" />
 
     <EditText
         android:layout_width="200sp"
         android:layout_height="wrap_content"
-        android:id="@+id/handleText"
-        android:layout_below="@+id/nameText"
+        android:id="@+id/createHandleText"
+        android:layout_below="@+id/createNameText"
         android:layout_toRightOf="@+id/accountPassword"
         android:layout_toEndOf="@+id/accountPassword"
         android:hint="User Handle" />

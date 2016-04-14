@@ -1,10 +1,13 @@
 package com.baseballforlife7795gmail.myapplication;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
@@ -14,9 +17,11 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,9 +47,9 @@ public class TrendieProfile extends FragmentActivity
     private GoogleMap map;
     private TextView username;
     private TextView userHandle;
+    public String name;
 
     private GoogleApiClient googleApiClient;
-    private TrendieDB db;
 
     private Timer timer;
 
@@ -66,9 +71,14 @@ public class TrendieProfile extends FragmentActivity
         LocationManager locationManager =
                 (LocationManager) getSystemService(LOCATION_SERVICE);
 
-        username = (TextView) findViewById(R.id.accountName);
+        username = (TextView) findViewById(R.id.name);
+        userHandle = (TextView) findViewById(R.id.handle);
 
 
+        String name = getIntent().getExtras().getString("Name");
+        String handle = getIntent().getExtras().getString("Handle");
+        username.setText(name);
+        userHandle.setText(handle);
 
     }
 
@@ -90,6 +100,7 @@ public class TrendieProfile extends FragmentActivity
         }
 
         googleApiClient.connect();
+
 
     }
 
@@ -121,10 +132,7 @@ public class TrendieProfile extends FragmentActivity
 
     private void setCurrentLocationMarker() {
         if (map != null) {
-            // get current location
-          //  if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            //    return;
-            //}
+            //get current location
             Location location = LocationServices.FusedLocationApi
                     .getLastLocation(googleApiClient);
 
@@ -214,6 +222,9 @@ public class TrendieProfile extends FragmentActivity
     public void onClick(View v) {
 
     }
+
+
+
 
 
 }
