@@ -29,22 +29,26 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/trendingTab"
+        android:text="@string/logout"
         android:id="@+id/trendingTab"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:onClick="onLogout" />
 
     <ImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/profilePic"
         android:layout_marginTop="12dp"
         android:layout_below="@+id/feedTab"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:shape="oval"
-        android:src="@drawable/profilepic" />
+        android:src="@drawable/profilepic"
+        android:clickable="true"
+        android:onClick="onClick" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,18 +56,18 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/handle"
         android:id="@+id/handle"
-        android:layout_below="@+id/name"
-        android:layout_toRightOf="@+id/profilePic"
-        android:layout_toEndOf="@+id/profilePic"
         android:paddingLeft="5sp"
         android:paddingStart="5sp"
         android:paddingEnd="0sp"
-        android:paddingRight="0sp"/>
+        android:paddingRight="0sp"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/profilePic"
+        android:layout_toEndOf="@+id/profilePic" />
 
     <fragment
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="200sp"
+        android:layout_height="400sp"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_below="@+id/profilePic"
         android:layout_alignParentLeft="true"
@@ -81,15 +85,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <ImageView
-        android:layout_width="50sp"
-        android:layout_height="50sp"
-        android:id="@+id/imageView"
-        android:src="@drawable/profilepic"
-        android:layout_below="@+id/lineAfterMap"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="5sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -115,6 +110,48 @@
         android:paddingLeft="5sp"
         android:paddingRight="0sp"
         android:text="@string/name" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="300sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/lineAfterMap"
+        android:layout_marginTop="15sp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="400sp"
+                android:layout_height="300sp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/profilepic"
+                android:layout_below="@+id/imageView"
+                android:layout_gravity="center_horizontal"/>
+
+            <ImageView
+                android:layout_width="400sp"
+                android:layout_height="300sp"
+                android:id="@+id/imageView3"
+                android:src="@drawable/profilepic"
+                android:layout_below="@+id/imageView2"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="400sp"
+                android:layout_height="300sp"
+                android:id="@+id/imageView"
+                android:src="@drawable/profilepic"
+                android:layout_below="@+id/lineAfterMap"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

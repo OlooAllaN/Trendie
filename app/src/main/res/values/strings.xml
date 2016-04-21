@@ -2,7 +2,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="app_name">Trendie</string>
     <string name="feedTab">Feed</string>
-    <string name="trendingTab">Trending</string>
+    <string name="logout">Logout</string>
     <string name="profileTab">Profile</string>
     <string name="name">John Doe</string>
     <string name="handle">johndoe</string>
@@ -12,4 +12,7 @@
     <string name="accountHandle">Handle:</string>
     <string name="create">CREATE</string>
     <string name="login">LOGIN</string>
+    <string name="createAccount">Create account here!</string>
+    <string name="loginIntro">Login to your Trendie account or create a new one below!</string>
+    <string name="backToLogin">Go back to Login Screen.</string>
 </resources>

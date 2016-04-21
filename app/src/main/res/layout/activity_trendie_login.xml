@@ -12,22 +12,21 @@
         android:layout_height="wrap_content"
         android:text="@string/accountHandle"
         android:id="@+id/accountHandle"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:textSize="20sp"
-        android:layout_marginTop="20sp"
-        android:layout_below="@+id/feedTab" />
+        android:layout_marginTop="55sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/accountPassword"
         android:id="@+id/accountPassword"
-        android:layout_below="@+id/accountHandle"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:textSize="20sp"
-        android:layout_marginTop="19sp" />
+        android:layout_below="@+id/handleText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -35,12 +34,12 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/passwordText"
+        android:hint="User Password"
         android:layout_below="@+id/handleText"
         android:layout_alignLeft="@+id/handleText"
         android:layout_alignStart="@+id/handleText"
         android:layout_alignRight="@+id/handleText"
-        android:layout_alignEnd="@+id/handleText"
-        android:hint="User Password" />
+        android:layout_alignEnd="@+id/handleText" />
 
     <EditText
         android:layout_width="200sp"
@@ -48,20 +47,47 @@
         android:id="@+id/handleText"
         android:hint="User Handle"
         android:layout_alignTop="@+id/accountHandle"
-        android:layout_toRightOf="@+id/accountPassword"
-        android:layout_toEndOf="@+id/accountPassword" />
+        android:layout_toRightOf="@+id/accountHandle"
+        android:layout_toEndOf="@+id/accountHandle"
+        android:layout_marginLeft="35sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:id="@+id/loginButton"
-        android:layout_below="@+id/accountPassword"
-        android:layout_toRightOf="@+id/accountPassword"
-        android:layout_toEndOf="@+id/accountPassword"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="38dp"
         android:onClick="onLogin"
-        android:nestedScrollingEnabled="false" />
+        android:nestedScrollingEnabled="false"
+        android:layout_below="@+id/passwordText"
+        android:layout_alignLeft="@+id/passwordText"
+        android:layout_alignStart="@+id/passwordText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/createAccount"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/loginButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp"
+        android:textColor="#0c31d6"
+        android:onClick="onCreateNew"
+        android:clickable="true"
+        android:password="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/loginIntro"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

@@ -67,4 +67,9 @@ public class CreateAccount extends Activity {
             }
         }
     }
+
+    public void onBack(View v){
+        Intent i = new Intent(CreateAccount.this, Login.class);
+        startActivity(i);
+    }
 }
