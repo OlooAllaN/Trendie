@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pro.soft.inzi.mapapp11.MapMain"
-    tools:showIn="@layout/activity_map_main">
+    tools:context=".TrendieProfile"
+    tools:showIn="@layout/activity_map_main"
+    android:id="@+id/parentLayout">
 
     <Button
         android:layout_width="wrap_content"
@@ -14,7 +15,9 @@
         android:id="@+id/feedTab"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:onClick="loadTrends"
+        android:clickable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -120,38 +123,70 @@
         android:layout_alignParentStart="false"
         android:layout_below="@+id/lineAfterMap"
         android:layout_marginTop="15sp"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/scrollView"
+        android:foregroundGravity="center_horizontal"
+        android:background="#989898">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:id="@+id/linearLayout">
 
             <ImageView
-                android:layout_width="400sp"
-                android:layout_height="300sp"
-                android:id="@+id/imageView2"
-                android:src="@drawable/profilepic"
-                android:layout_below="@+id/imageView"
-                android:layout_gravity="center_horizontal"/>
-
-            <ImageView
-                android:layout_width="400sp"
-                android:layout_height="300sp"
-                android:id="@+id/imageView3"
-                android:src="@drawable/profilepic"
-                android:layout_below="@+id/imageView2"
-                android:layout_gravity="center_horizontal" />
-
-            <ImageView
-                android:layout_width="400sp"
-                android:layout_height="300sp"
+                android:layout_width="303dp"
+                android:layout_height="300dp"
                 android:id="@+id/imageView"
-                android:src="@drawable/profilepic"
-                android:layout_below="@+id/lineAfterMap"
-                android:layout_gravity="center_horizontal" />
+                android:layout_alignBottom="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="87dp"
+                android:foregroundGravity="center_horizontal"
+                android:src="@drawable/trendieicon"
+                android:background="#a5a5a5"
+                android:clickable="true"
+                android:onClick="showAddress"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="303dp"
+                android:layout_height="300dp"
+                android:id="@+id/imageView2"
+                android:layout_alignBottom="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="87dp"
+                android:foregroundGravity="center_horizontal"
+                android:background="#a5a5a5"
+                android:clickable="true"
+                android:onClick="showAddress"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="303dp"
+                android:layout_height="300dp"
+                android:id="@+id/imageView3"
+                android:layout_alignBottom="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="87dp"
+                android:foregroundGravity="center_horizontal"
+                android:background="#a5a5a5"
+                android:clickable="true"
+                android:onClick="showAddress"
+                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload"
+        android:id="@+id/upload"
+        android:layout_below="@+id/name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onClick" />
 
 
 </RelativeLayout>

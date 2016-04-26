@@ -32,7 +32,8 @@
         android:allowBackup="true"
         android:icon="@drawable/trendieicon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -58,6 +59,11 @@
 
         <activity
             android:name=".CreateAccount"
+            android:label="Trendie">
+        </activity>
+
+        <activity
+            android:name=".Feed_Activity"
             android:label="Trendie">
         </activity>
 

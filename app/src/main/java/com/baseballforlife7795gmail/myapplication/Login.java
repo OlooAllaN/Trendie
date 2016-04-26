@@ -41,14 +41,13 @@ public class Login extends Activity {
         }
 
         info.getData(handle.getText().toString());
-
-        if(info.getPassword().equals(password.getText().toString()) && info.getHandle().equals(handle.getText().toString())) {
+        if(info.getPassword().
+                equals(password.getText().toString())
+                && info.getHandle().equals(handle.getText().toString())) {
             Intent i = new Intent(Login.this, TrendieProfile.class);
 
             i.putExtra("Handle", info.getHandle());
             i.putExtra("Name", info.getName());
-
-            System.out.println(info.getProfileP());
             i.putExtra("Picture", info.getProfileP());
 
             startActivity(i);

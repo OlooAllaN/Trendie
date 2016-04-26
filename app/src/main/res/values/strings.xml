@@ -15,4 +15,6 @@
     <string name="createAccount">Create account here!</string>
     <string name="loginIntro">Login to your Trendie account or create a new one below!</string>
     <string name="backToLogin">Go back to Login Screen.</string>
+    <string name="upload">Upload</string>
+    <string name="profile_image_label">Park</string>
 </resources>
